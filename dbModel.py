@@ -20,7 +20,7 @@ class UserData(db.Model):
     Id = db.Column(db.Integer, primary_key=True)
     Name = db.Column(db.String(64))
     Description = db.Column(db.String(256))
-    CreateDate = db.Column(db.DateTime)
+    CreateDate = db.Column(db.String(256))
 
     def __init__(self
                  , Name
