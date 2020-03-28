@@ -6,4 +6,5 @@ itsdangerous
 MarkupSafe
 Werkzeug
 psycopg2
-
+Flask-Script
+click
