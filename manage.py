@@ -38,7 +38,7 @@ class Account(db.Model):
         self.username = username
         self.password = password
         self.email = email
-    def __init__(self, username):
+    def nameaccount(self, username):
         self.username = username
 
     def __repr__(self):
