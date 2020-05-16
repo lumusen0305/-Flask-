@@ -9,5 +9,4 @@ psycopg2
 Flask-Script
 click
 Flask-APScheduler
-Thread
 Flask-Mail
