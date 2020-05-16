@@ -8,3 +8,6 @@ Werkzeug
 psycopg2
 Flask-Script
 click
+flask_apscheduler
+threading
+flask_mail
