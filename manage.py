@@ -193,4 +193,4 @@ if __name__ == "__main__":
     scheduler=APScheduler()  # 例項化APScheduler
     scheduler.init_app(app)  # 把任務列表放進flask
     scheduler.start() # 啟動任務列表
-    app.run(host='0.0.0.0')
+    app.run()
