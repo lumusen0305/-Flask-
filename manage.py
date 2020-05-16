@@ -186,7 +186,9 @@ from app.websocket import websocket as websocket_blueprint
 app.register_blueprint(websocket_blueprint, url_prefix="/websocket")
 app.register_blueprint(account_blueprint, url_prefix="/account")
 
-
+@app.route('/' , methods=['GET'])
+def register():
+    return "Hello"
 if __name__ == "__main__":
     scheduler=APScheduler()  # 例項化APScheduler
     scheduler.init_app(app)  # 把任務列表放進flask
