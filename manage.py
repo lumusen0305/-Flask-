@@ -44,7 +44,7 @@ app.config.from_object(Config())
 from flask_sqlalchemy import SQLAlchemy
 from flask_script import Manager
 from flask_migrate import Migrate, MigrateCommand
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://pguhbdjcadenyh:5724176d79b7afd98ddbe7cbe390dabfa40f0de1f0745468dc67f6eda2c1697b@ec2-3-234-109-123.compute-1.amazonaws.com:5432/d4v5kaf1e8vg2l'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://mstdcfjsudxodu:f143612b550b7065999bd06f4f09ef2156f8edb6d980da4e1e7dc01a2551bf77@ec2-52-71-55-81.compute-1.amazonaws.com:5432/d2ofkbduq9pta0'
 # app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///example.sqlite"
 app.config['MAIL_PORT'] = 465
 app.config['MAIL_SUPPRESS_SEND'] = False    # 发送邮件，为True则不发送
