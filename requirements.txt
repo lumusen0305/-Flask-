@@ -10,3 +10,4 @@ Flask-Script
 click
 Flask-APScheduler
 Flask-Mail
+gunicorn==0.14.2
