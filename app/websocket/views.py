@@ -1,4 +1,3 @@
-from sqlalchemy import text
 from . import websocket
 from flask import request, jsonify
 from websocket import create_connection
@@ -11,7 +10,7 @@ def send_to_front():
     time =str(datetime.datetime.now())
     msg=url(time,photourl)
     url.add(msg)
-    # client_handle()
+    client_handle()
     if msg != None:
         return_dict = {
             "data": True,
@@ -38,9 +37,7 @@ def search():
 
 # =================function=========================
 def client_handle():
-    ws = create_connection('ws://localhost:12345/ws')
+    ws = create_connection('ws://34.71.251.0:12345/ws')
     if ws.connected:
         ws.send('Please Up Date')
         result = ws.recv()
-        # print(f"client received:{result}")
-        # ws.close()

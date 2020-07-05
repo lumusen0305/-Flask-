@@ -44,8 +44,8 @@ app.config.from_object(Config())
 from flask_sqlalchemy import SQLAlchemy
 from flask_script import Manager
 from flask_migrate import Migrate, MigrateCommand
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://mstdcfjsudxodu:f143612b550b7065999bd06f4f09ef2156f8edb6d980da4e1e7dc01a2551bf77@ec2-52-71-55-81.compute-1.amazonaws.com:5432/d2ofkbduq9pta0'
-# app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///example.sqlite"
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://mstdcfjsudxodu:f143612b550b7065999bd06f4f09ef2156f8edb6d980da4e1e7dc01a2551bf77@ec2-52-71-55-81.compute-1.amazonaws.com:5432/d2ofkbduq9pta0'
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///example.sqlite"
 app.config['MAIL_PORT'] = 465
 app.config['MAIL_SUPPRESS_SEND'] = False    # 发送邮件，为True则不发送
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'   # 邮箱服务器
@@ -167,9 +167,8 @@ def send_dinner():
 def send_last_night_supper():
     msg = Message(subject="天狗精靈說：清晨好",
                   sender=app.config.get("MAIL_USERNAME"),
-                  recipients=['fh831.cp9gw@gmail.com'],  # replace with your email for testing
+                  recipients=['fh831.cp9gw@gmail.com'],
                   body="生而為人忘記吃飯是不可避免的,天狗精靈提醒您記得吃宵夜")
-    # 邮件内容会以文本和html两种格式呈现，而你能看到哪种格式取决于你的邮件客户端。
     msg.body = 'sended by flask-email'
     msg.html = '<b>生而為人忘記吃飯是不可避免的,天狗精靈提醒您記得吃宵夜<b>'
     thread = Thread(target=send_async_email, args=[app, msg])
